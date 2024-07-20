@@ -1,33 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /* Colors */
+  --primary-color-1: rgb(0, 51, 102);
+  --primary-color-2: rgb(225, 102, 0);
+  --secondary-color-1: rgb(245, 245, 245);
+  --secondary-color-2: rgb(51, 51, 51);
+  --secondary-color-3: rgb(0, 128, 128);
+  --accent-color-1: rgb(255, 204, 0);
+  --accent-color-2: rgb(40, 167, 69);
+  --neutral-color-white: rgb(255, 255, 255);
+  --neutral-color-light-gray: rgb(211, 211, 211);
+  --neutral-color-black: rgb(0, 0, 0);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  /* Typography */
+  --font-family-base: 'Poppins';
+  --font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-serif: 'Georgia', Times, 'Times New Roman', serif;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-sm: 14px;
+  --line-height-base: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-sm: 1.25;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Borders and Shadows */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  /* Z-Index Levels */
+  --z-index-dropdown: 1000;
+  --z-index-sticky: 1020;
+  --z-index-fixed: 1030;
+  --z-index-modal-backdrop: 1040;
+  --z-index-modal: 1050;
+  --z-index-popover: 1060;
+  --z-index-tooltip: 1070;
+
+  /* Transitions */
+  --transition-duration: 0.3s;
+  --transition-timing-function: ease-in-out;
+
+  /* Miscellaneous */
+  --max-width-container: 1200px;
+  --navbar-height: 60px;
+  --footer-height: 80px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--secondary-color-1);
+  background-color: var(--primary-color-1);
+  margin: 0;
+  padding: 0;
 }
